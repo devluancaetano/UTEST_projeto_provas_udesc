@@ -1,0 +1,195 @@
+
+body {
+    display: block; /* Remove o flexbox que empurrava para o lado */
+    background-color: #f8f9fa; /* Um cinza bem clarinho de fundo, igual ao print */
+}
+
+.top-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 40px;
+    border-bottom: 1px solid #eaeaea;
+    background-color: #fff;
+    width: 100%; 
+}
+
+.logo-small {
+    height: 100px;
+}
+
+.user-profile {
+    display: flex;
+    align-items: center;
+    background-color: #e0e0e0;
+    padding: 6px 20px 6px 6px;
+    border-radius: 30px;
+    gap: 12px;
+}
+
+.user-initials {
+    background-color: #0b572a;
+    color: #fff;
+    width: 36px;
+    height: 36px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    font-weight: bold;
+    font-size: 14px;
+    letter-spacing: 1px;
+}
+
+.user-name {
+    font-size: 18px;
+    color: #333;
+}
+
+.container-prova {
+    max-width: 900px;
+    margin: 40px auto;
+    padding: 0 20px;
+}
+
+.prova-header {
+    background-color: #ededed;
+    border-radius: 12px;
+    padding: 25px;
+    margin-bottom: 30px;
+}
+
+.prova-title-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.prova-title-row h2 {
+    font-size: 22px;
+    font-weight: normal;
+    color: #000;
+}
+
+.prova-badges {
+    display: flex;
+    gap: 15px;
+}
+
+.badge {
+    background-color: #fff;
+    padding: 8px 25px;
+    border-radius: 20px;
+    font-size: 14px;
+    color: #333;
+}
+
+.prova-description {
+    background-color: #fff;
+    padding: 15px 20px;
+    border-radius: 8px;
+    font-size: 15px;
+    color: #000;
+}
+
+.questoes-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    margin-bottom: 20px;
+}
+
+.questoes-header h3 {
+    font-size: 20px;
+    font-weight: normal;
+}
+
+.questoes-header span {
+    font-size: 14px;
+    color: #333;
+}
+
+.questao-card {
+    background-color: #ededed;
+    border-radius: 12px;
+    padding: 20px 25px;
+    margin-bottom: 25px;
+}
+
+.questao-top {
+    text-align: center;
+    font-size: 14px;
+    margin-bottom: 15px;
+    color: #333;
+}
+
+.questao-texto {
+    background-color: #fff;
+    padding: 25px;
+    border-radius: 12px;
+    font-size: 15px;
+    line-height: 1.6;
+    color: #000;
+    margin-bottom: 25px;
+}
+
+.questao-alternativas {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    padding-left: 5px;
+}
+
+.alternativa {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+.alternativa input[type="radio"] {
+    display: none; 
+}
+
+.custom-radio {
+    width: 18px;
+    height: 18px;
+    background-color: #d9d9d9;
+    border-radius: 50%;
+    display: inline-block;
+    transition: all 0.2s ease-in-out;
+}
+
+.alternativa input[type="radio"]:checked + .custom-radio {
+    background-color: #0b572a; 
+    box-shadow: 0 0 0 3px #ededed, 0 0 0 5px #0b572a; /* Cria o efeito de anel ao redor */
+}
+
+.questao-resposta-descritiva textarea {
+    width: 100%;
+    padding: 15px;
+    border-radius: 8px;
+    border: none;
+    font-size: 15px;
+    line-height: 1.5;
+    resize: vertical;
+    outline: none;
+}
+
+.questao-resposta-descritiva textarea:focus {
+    box-shadow: 0 0 0 2px #0b572a;
+}
+
+.acoes-prova {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 30px;
+    margin-bottom: 60px;
+}
+
+.acoes-prova .btn-submit {
+    width: auto;
+    padding: 12px 40px;
+}

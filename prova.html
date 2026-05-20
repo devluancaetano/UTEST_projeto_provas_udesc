@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UTEST - Tela de Prova</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="prova.css">
+</head>
+<body>
+
+    <nav class="top-nav">
+        <div class="logo-container">
+            <img src="logo.png" alt="Logo UTEST" class="logo-small">
+        </div>
+        
+        <div class="user-profile">
+            <span class="user-initials" id="iniciaisAluno">LR</span>
+            <span class="user-name" id="nomeAluno">Lucas Ratzmann</span>
+        </div>
+        </nav>
+
+    <main class="container-prova">
+        <section class="prova-header">
+            <div class="prova-title-row">
+                <h2>Prova I - Projeto integrador I</h2>
+                <div class="prova-badges">
+                    <span class="badge">24/04/2026</span>
+                    <span class="badge timer">59:15</span>
+                </div>
+            </div>
+            <div class="prova-description">
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor</p>
+            </div>
+        </section>
+
+        <section class="questoes-container">
+            <div class="questoes-header">
+                <h3>Questões</h3>
+                <span>Total de questões: 02</span>
+            </div>
+
+            <div class="questao-card">
+                <div class="questao-top">Questão 01</div>
+                
+                <div class="questao-texto">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse.</p>
+                </div>
+                
+                <div class="questao-alternativas">
+                    <label class="alternativa">
+                        <input type="radio" name="q1" value="A">
+                        <span class="custom-radio"></span>
+                    </label>
+                    <label class="alternativa">
+                        <input type="radio" name="q1" value="B">
+                        <span class="custom-radio"></span>
+                    </label>
+                    <label class="alternativa">
+                        <input type="radio" name="q1" value="C">
+                        <span class="custom-radio"></span>
+                    </label>
+                    <label class="alternativa">
+                        <input type="radio" name="q1" value="D">
+                        <span class="custom-radio"></span>
+                    </label>
+                </div>
+            </div>
+
+            <div class="questao-card">
+                <div class="questao-top">Questão 02</div>
+                
+                <div class="questao-texto">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                </div>
+                
+                <div class="questao-resposta-descritiva">
+                    <textarea placeholder="Digite sua resposta aqui..." rows="6"></textarea>
+                </div>
+            </div>
+            
+            <div class="acoes-prova">
+                <button class="btn-submit">Finalizar Prova</button>
+            </div>
+        </section>
+    </main>
+    
+</body>
+</html>
