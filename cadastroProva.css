@@ -1,0 +1,301 @@
+body {
+    display: block;
+    background-color: #f8f9fa;
+}
+
+/* ── Navegação ── */
+.top-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 40px;
+    border-bottom: 1px solid #eaeaea;
+    background-color: #fff;
+    width: 100%;
+}
+
+.logo-small {
+    height: 100px;
+}
+
+.user-profile {
+    display: flex;
+    align-items: center;
+    background-color: #e0e0e0;
+    padding: 6px 20px 6px 6px;
+    border-radius: 30px;
+    gap: 12px;
+}
+
+.user-initials {
+    background-color: #0b572a;
+    color: #fff;
+    width: 36px;
+    height: 36px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    font-weight: bold;
+    font-size: 14px;
+    letter-spacing: 1px;
+}
+
+.user-name {
+    font-size: 18px;
+    color: #333;
+}
+
+/* ── Layout principal ── */
+.container-cadastro {
+    max-width: 900px;
+    margin: 40px auto;
+    padding: 0 20px;
+    display: flex;
+    gap: 30px;
+    align-items: flex-start;
+}
+
+.page-sidebar {
+    flex: 0 0 160px;
+}
+
+.page-sidebar h2 {
+    font-size: 22px;
+    font-weight: bold;
+    color: #000;
+    margin-bottom: 8px;
+}
+
+.page-sidebar p {
+    font-size: 13px;
+    color: #555;
+}
+
+.page-content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+/* ── Card de informações ── */
+.info-card {
+    background-color: #ededed;
+    border-radius: 12px;
+    padding: 20px 25px;
+}
+
+.info-card h3 {
+    font-size: 16px;
+    font-weight: bold;
+    color: #000;
+    margin-bottom: 18px;
+}
+
+.field-group {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    margin-bottom: 15px;
+}
+
+.field-group label {
+    font-size: 13px;
+    color: #555;
+}
+
+.field-group input {
+    padding: 10px 14px;
+    border: none;
+    border-radius: 8px;
+    background-color: #fff;
+    font-size: 14px;
+    outline: none;
+}
+
+.field-group input:focus {
+    box-shadow: 0 0 0 2px #0b572a;
+}
+
+.info-row {
+    display: flex;
+    gap: 15px;
+}
+
+.info-row .field-group {
+    flex: 1;
+}
+
+/* ── Seção de questões ── */
+.questoes-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    margin-bottom: 20px;
+}
+
+.questoes-header h3 {
+    font-size: 20px;
+    font-weight: normal;
+}
+
+.questoes-header span {
+    font-size: 14px;
+    color: #333;
+}
+
+.questao-card {
+    background-color: #ededed;
+    border-radius: 12px;
+    padding: 20px 25px;
+    margin-bottom: 20px;
+}
+
+.questao-top {
+    text-align: center;
+    font-size: 14px;
+    color: #333;
+    margin-bottom: 18px;
+}
+
+.label-campo {
+    display: block;
+    font-size: 13px;
+    color: #555;
+    margin-bottom: 8px;
+}
+
+.enunciado-input {
+    width: 100%;
+    padding: 12px 15px;
+    border: none;
+    border-radius: 8px;
+    background-color: #fff;
+    font-size: 14px;
+    font-family: Arial, Helvetica, sans-serif;
+    resize: vertical;
+    outline: none;
+    margin-bottom: 18px;
+}
+
+.enunciado-input:focus {
+    box-shadow: 0 0 0 2px #0b572a;
+}
+
+/* ── Tipo de questão ── */
+.tipo-questao {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.tipo-opcao {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 13px;
+    cursor: pointer;
+    color: #333;
+}
+
+.tipo-opcao input[type="radio"] {
+    display: none;
+}
+
+.custom-sq {
+    width: 12px;
+    height: 12px;
+    border: 2px solid #888;
+    border-radius: 3px;
+    display: inline-block;
+    flex-shrink: 0;
+    transition: all 0.2s;
+}
+
+.tipo-opcao input[type="radio"]:checked + .custom-sq {
+    background-color: #0b572a;
+    border-color: #0b572a;
+}
+
+/* ── Alternativas ── */
+.alternativas {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.alternativa-item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.alt-circulo {
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    border: 2px solid #0b572a;
+    flex-shrink: 0;
+}
+
+.alternativa-item input {
+    flex: 1;
+    padding: 8px 12px;
+    border: none;
+    border-radius: 8px;
+    background-color: #fff;
+    font-size: 14px;
+    outline: none;
+}
+
+.alternativa-item input:focus {
+    box-shadow: 0 0 0 2px #0b572a;
+}
+
+/* ── Botão adicionar questão ── */
+.btn-add-wrapper {
+    display: flex;
+    justify-content: center;
+    margin-top: 5px;
+}
+
+.btn-add {
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    background-color: #0b572a;
+    color: #fff;
+    border: none;
+    font-size: 28px;
+    line-height: 1;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.btn-add:hover {
+    background-color: #08401e;
+}
+
+/* ── Botão finalizar ── */
+.acoes-cadastro {
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 60px;
+}
+
+.btn-submit {
+    padding: 12px 40px;
+    background-color: #0b572a;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.btn-submit:hover {
+    background-color: #08401e;
+}

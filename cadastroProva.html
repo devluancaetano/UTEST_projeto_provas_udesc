@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UTEST - Cadastro de Prova</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="cadastroProva.css">
+</head>
+<body>
+
+    <nav class="top-nav">
+        <div class="logo-container">
+            <img src="logo.png" alt="Logo UTEST" class="logo-small">
+        </div>
+        <div class="user-profile">
+            <span class="user-initials">PG</span>
+            <span class="user-name">Prof. Girafales</span>
+        </div>
+    </nav>
+
+    <main class="container-cadastro">
+
+        <aside class="page-sidebar">
+            <h2>Nova prova</h2>
+            <p>Configure sua avaliação</p>
+        </aside>
+
+        <div class="page-content">
+
+            <section class="info-card">
+                <h3>Informações da prova</h3>
+                <div class="field-group">
+                    <label for="nomeProva">Nome da prova</label>
+                    <input type="text" id="nomeProva" placeholder="Ex: Prova 1 Algoritmos">
+                </div>
+                <div class="info-row">
+                    <div class="field-group">
+                        <label for="duracao">Duração</label>
+                        <input type="text" id="duracao" placeholder="Ex: 60min">
+                    </div>
+                    <div class="field-group">
+                        <label for="data">Data</label>
+                        <input type="date" id="data">
+                    </div>
+                </div>
+            </section>
+
+            <section class="questoes-section">
+                <div class="questoes-header">
+                    <h3>Questões</h3>
+                    <span id="totalQuestoes">Total de questões: 01</span>
+                </div>
+
+                <div id="listaQuestoes">
+                    <div class="questao-card">
+                        <div class="questao-top">Questão 01</div>
+
+                        <label class="label-campo">Enunciado</label>
+                        <textarea class="enunciado-input" placeholder="Digite o enunciado da questão..." rows="4"></textarea>
+
+                        <div class="tipo-questao">
+                            <label class="tipo-opcao">
+                                <input type="radio" name="tipo1" value="dissertativa">
+                                <span class="custom-sq"></span>
+                                Dissertativa
+                            </label>
+                            <label class="tipo-opcao">
+                                <input type="radio" name="tipo1" value="multipla">
+                                <span class="custom-sq"></span>
+                                Múltipla escolha
+                            </label>
+                            <label class="tipo-opcao">
+                                <input type="radio" name="tipo1" value="vf">
+                                <span class="custom-sq"></span>
+                                Verdadeiro ou Falso
+                            </label>
+                            <label class="tipo-opcao">
+                                <input type="radio" name="tipo1" value="objetiva">
+                                <span class="custom-sq"></span>
+                                Objetiva
+                            </label>
+                        </div>
+
+                        <div class="alternativas">
+                            <div class="alternativa-item">
+                                <span class="alt-circulo"></span>
+                                <input type="text" placeholder="Alternativa A">
+                            </div>
+                            <div class="alternativa-item">
+                                <span class="alt-circulo"></span>
+                                <input type="text" placeholder="Alternativa B">
+                            </div>
+                            <div class="alternativa-item">
+                                <span class="alt-circulo"></span>
+                                <input type="text" placeholder="Alternativa C">
+                            </div>
+                            <div class="alternativa-item">
+                                <span class="alt-circulo"></span>
+                                <input type="text" placeholder="Alternativa D">
+                            </div>
+                            <div class="alternativa-item">
+                                <span class="alt-circulo"></span>
+                                <input type="text" placeholder="Alternativa E">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="btn-add-wrapper">
+                    <button class="btn-add" onclick="adicionarQuestao()">+</button>
+                </div>
+            </section>
+
+            <div class="acoes-cadastro">
+                <button class="btn-submit" onclick="window.location.href='loginProfessor.html'">Finalizar Prova</button>
+            </div>
+
+        </div>
+    </main>
+
+    <script>
+        let total = 1;
+
+        function adicionarQuestao() {
+            total++;
+            document.getElementById('totalQuestoes').textContent = 'Total de questões: ' + String(total).padStart(2, '0');
+
+            const card = document.createElement('div');
+            card.className = 'questao-card';
+            card.innerHTML = `
+                <div class="questao-top">Questão ${String(total).padStart(2, '0')}</div>
+                <label class="label-campo">Enunciado</label>
+                <textarea class="enunciado-input" placeholder="Digite o enunciado da questão..." rows="4"></textarea>
+                <div class="tipo-questao">
+                    <label class="tipo-opcao">
+                        <input type="radio" name="tipo${total}" value="dissertativa">
+                        <span class="custom-sq"></span>
+                        Dissertativa
+                    </label>
+                    <label class="tipo-opcao">
+                        <input type="radio" name="tipo${total}" value="multipla">
+                        <span class="custom-sq"></span>
+                        Múltipla escolha
+                    </label>
+                    <label class="tipo-opcao">
+                        <input type="radio" name="tipo${total}" value="vf">
+                        <span class="custom-sq"></span>
+                        Verdadeiro ou Falso
+                    </label>
+                    <label class="tipo-opcao">
+                        <input type="radio" name="tipo${total}" value="objetiva">
+                        <span class="custom-sq"></span>
+                        Objetiva
+                    </label>
+                </div>
+                <div class="alternativas">
+                    <div class="alternativa-item"><span class="alt-circulo"></span><input type="text" placeholder="Alternativa A"></div>
+                    <div class="alternativa-item"><span class="alt-circulo"></span><input type="text" placeholder="Alternativa B"></div>
+                    <div class="alternativa-item"><span class="alt-circulo"></span><input type="text" placeholder="Alternativa C"></div>
+                    <div class="alternativa-item"><span class="alt-circulo"></span><input type="text" placeholder="Alternativa D"></div>
+                    <div class="alternativa-item"><span class="alt-circulo"></span><input type="text" placeholder="Alternativa E"></div>
+                </div>
+            `;
+            document.getElementById('listaQuestoes').appendChild(card);
+        }
+    </script>
+
+</body>
+</html>
